@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<title>Faça cocô no trampo!</title>
 </head>
 	<body>
@@ -9,20 +10,17 @@
 
 		<p>Calcule o quanto você ganha fazendo cocô no seu trabalho:</p>
 
-		<ol>
-			<li>
-				<label for="earn_per_hour">Quanto você ganha por hora?</label>
-  			<input type="text" id="earn_per_hour" name="earn_per_hour">
-			</li>
-			<li>
-				<label for="poo_time">Quanto tempo você leva para fazer um cocô no trampo?</label>
-  			<input type="text" id="poo_time" name="poo_time">
-			</li>
-			<li>
-				<button id="button">Quanto eu ganho fazendo cocô no trampo?</button>
-			</li>
-		</ol>
-		<span id="resultText"></span>
+		<div>
+	    <label for="earn_per_hour">Quanto você ganha por hora?</label>
+  		<input type="text" id="earn_per_hour" name="earn_per_hour">
+
+	    <label for="poo_time">Quanto tempo você leva para fazer um cocô no trampo?</label>
+  		<input type="text" id="poo_time" name="poo_time">
+	  
+	    <button id="button" class="button">Quanto eu ganho fazendo cocô no trampo?</button>
+
+	    <span id="resultText"></span>
+		</div>
 
 		<script type="text/javascript">
 			function pooCalculator() {
