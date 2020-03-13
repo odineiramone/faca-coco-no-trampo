@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Faça cocô no trampo!</title>
+</head>
+	<body>
+		<h1>Faça cocô no trampo!</h1>
+
+		<p>Calcule o quanto você ganha fazendo cocô no seu trabalho:</p>
+
+		<ol>
+			<li>
+				<label for="earn_per_hour">Quanto você ganha por hora?</label>
+  			<input type="text" id="earn_per_hour" name="earn_per_hour">
+			</li>
+			<li>
+				<label for="poo_time">Quanto tempo você leva para fazer um cocô no trampo?</label>
+  			<input type="text" id="poo_time" name="poo_time">
+			</li>
+			<li>
+				<button id="button">Quanto eu ganho fazendo cocô no trampo?</button>
+			</li>
+		</ol>
+		<span id="resultText"></span>
+
+		<script type="text/javascript">
+			function pooCalculator() {
+				const earn_per_hour = parseFloat(document.getElementById("earn_per_hour").value);
+				const poo_time      = parseInt(document.getElementById("poo_time").value);
+
+				const earn_per_minute = (earn_per_hour / 60);
+				const earn_per_poo    = earn_per_minute * poo_time;
+
+				const result = `Você recebeu R$ ${earn_per_poo.toFixed(2)} por esse cocô! Parabéns!`;
+
+				document.querySelector("#resultText").innerText = result;
+			}
+
+			document.querySelector("button").addEventListener('click', pooCalculator);
+		</script>
+	</body>
+</html>
